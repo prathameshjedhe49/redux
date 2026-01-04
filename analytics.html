@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Analytics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h3><i class="fas fa-chart-line me-2"></i>Dashboard</h3>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"><i class="fas fa-home me-2"></i>Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="users.html"><i class="fas fa-users me-2"></i>Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="revenue.html"><i class="fas fa-dollar-sign me-2"></i>Revenue</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="analytics.html"><i class="fas fa-chart-bar me-2"></i>Analytics</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header d-flex justify-content-between align-items-center">
+            <div>
+                <button class="btn btn-outline-secondary" id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="ms-3 fs-4 fw-bold">Analytics Dashboard</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-primary">
+                    <i class="fas fa-download me-2"></i>Export Report
+                </button>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Analytics Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="stat-card bg-info text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Total Visits</p>
+                            <h3>45,789</h3>
+                            <small>+22% this month</small>
+                        </div>
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-success">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Conversion Rate</p>
+                            <h3>3.5%</h3>
+                            <small>+0.5% increase</small>
+                        </div>
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-warning">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Bounce Rate</p>
+                            <h3>42%</h3>
+                            <small>-5% improvement</small>
+                        </div>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-danger">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Avg Session</p>
+                            <h3>4m 32s</h3>
+                            <small>+18s longer</small>
+                        </div>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- Traffic Sources -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Traffic Sources</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-search text-primary me-2"></i>Organic Search</span>
+                                <strong>45%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-link text-success me-2"></i>Direct</span>
+                                <strong>30%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fab fa-facebook text-info me-2"></i>Social Media</span>
+                                <strong>15%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-info" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-bullhorn text-warning me-2"></i>Referral</span>
+                                <strong>10%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-warning" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Device Analytics -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Device Breakdown</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-desktop text-primary me-2"></i>Desktop</span>
+                                <strong>55%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-mobile-alt text-success me-2"></i>Mobile</span>
+                                <strong>35%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span><i class="fas fa-tablet-alt text-info me-2"></i>Tablet</span>
+                                <strong>10%</strong>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-info" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="card mb-4">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Top Performing Pages</h5>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Page</th>
+                            <th>Views</th>
+                            <th>Unique Visitors</th>
+                            <th>Avg Time</th>
+                            <th>Bounce Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-home me-2 text-primary"></i>/home</td>
+                            <td>12,450</td>
+                            <td>9,870</td>
+                            <td>3m 45s</td>
+                            <td><span class="badge bg-success">38%</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-shopping-cart me-2 text-success"></i>/products</td>
+                            <td>8,900</td>
+                            <td>7,230</td>
+                            <td>5m 12s</td>
+                            <td><span class="badge bg-success">32%</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-blog me-2 text-info"></i>/blog</td>
+                            <td>6,780</td>
+                            <td>5,890</td>
+                            <td>6m 30s</td>
+                            <td><span class="badge bg-warning">45%</span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-info-circle me-2 text-secondary"></i>/about</td>
+                            <td>3,450</td>
+                            <td>2,980</td>
+                            <td>2m 15s</td>
+                            <td><span class="badge bg-danger">58%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Geographic Data -->
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Top Countries</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="activity-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong><i class="fas fa-flag-usa me-2 text-primary"></i>United States</strong>
+                            <p class="mb-0 text-muted small">North America</p>
+                        </div>
+                        <div class="text-end">
+                            <strong>18,450</strong>
+                            <p class="mb-0 text-muted small">40% of total</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong><i class="fas fa-flag me-2 text-success"></i>India</strong>
+                            <p class="mb-0 text-muted small">Asia</p>
+                        </div>
+                        <div class="text-end">
+                            <strong>12,340</strong>
+                            <p class="mb-0 text-muted small">27% of total</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong><i class="fas fa-flag me-2 text-info"></i>United Kingdom</strong>
+                            <p class="mb-0 text-muted small">Europe</p>
+                        </div>
+                        <div class="text-end">
+                            <strong>8,900</strong>
+                            <p class="mb-0 text-muted small">19% of total</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong><i class="fas fa-flag me-2 text-danger"></i>Canada</strong>
+                            <p class="mb-0 text-muted small">North America</p>
+                        </div>
+                        <div class="text-end">
+                            <strong>6,560</strong>
+                            <p class="mb-0 text-muted small">14% of total</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="Scipt/script.js"></script>
+</body>
+</html>

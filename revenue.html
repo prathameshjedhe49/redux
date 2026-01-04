@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Revenue</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h3><i class="fas fa-chart-line me-2"></i>Dashboard</h3>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"><i class="fas fa-home me-2"></i>Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="users.html"><i class="fas fa-users me-2"></i>Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="revenue.html"><i class="fas fa-dollar-sign me-2"></i>Revenue</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="analytics.html"><i class="fas fa-chart-bar me-2"></i>Analytics</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header d-flex justify-content-between align-items-center">
+            <div>
+                <button class="btn btn-outline-secondary" id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="ms-3 fs-4 fw-bold">Revenue Overview</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <select class="form-select" style="width: auto;">
+                    <option>This Month</option>
+                    <option>Last Month</option>
+                    <option>This Year</option>
+                </select>
+                <div class="user-avatar">A</div>
+            </div>
+        </div>
+
+        <!-- Revenue Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="stat-card bg-success">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Total Revenue</p>
+                            <h3>$45,678</h3>
+                            <small>+15% from last month</small>
+                        </div>
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-primary">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Today's Revenue</p>
+                            <h3>$1,234</h3>
+                            <small>+8% from yesterday</small>
+                        </div>
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-warning">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Avg Order Value</p>
+                            <h3>$78</h3>
+                            <small>+5% increase</small>
+                        </div>
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card bg-danger">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Pending Payments</p>
+                            <h3>$2,456</h3>
+                            <small>23 orders pending</small>
+                        </div>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Revenue Chart -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Monthly Revenue Trend</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder bg-light p-5 text-center">
+                            <i class="fas fa-chart-line fa-4x text-muted mb-3"></i>
+                            <p class="text-muted">Revenue chart will be displayed here</p>
+                            <small class="text-muted">Use Chart.js or other charting library</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Products -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Top Revenue Products</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="activity-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Product A</strong>
+                                    <p class="mb-0 text-muted small">Electronics</p>
+                                </div>
+                                <strong class="text-success">$12,450</strong>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Product B</strong>
+                                    <p class="mb-0 text-muted small">Clothing</p>
+                                </div>
+                                <strong class="text-success">$8,900</strong>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Product C</strong>
+                                    <p class="mb-0 text-muted small">Accessories</p>
+                                </div>
+                                <strong class="text-success">$6,780</strong>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Product D</strong>
+                                    <p class="mb-0 text-muted small">Furniture</p>
+                                </div>
+                                <strong class="text-success">$5,430</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="card mt-4">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Recent Transactions</h5>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#TXN001</td>
+                            <td>John Doe</td>
+                            <td>Product A</td>
+                            <td><strong class="text-success">$299</strong></td>
+                            <td><span class="badge bg-success">Completed</span></td>
+                            <td>Dec 22, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>#TXN002</td>
+                            <td>Jane Smith</td>
+                            <td>Product B</td>
+                            <td><strong class="text-success">$499</strong></td>
+                            <td><span class="badge bg-success">Completed</span></td>
+                            <td>Dec 22, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>#TXN003</td>
+                            <td>Bob Johnson</td>
+                            <td>Product C</td>
+                            <td><strong class="text-warning">$199</strong></td>
+                            <td><span class="badge bg-warning">Pending</span></td>
+                            <td>Dec 21, 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="Scipt/script.js"></script>
+</body>
+</html>
