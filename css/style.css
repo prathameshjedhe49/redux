@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: lightgray;
+}
+
+.sidebar {
+    height: 100vh;
+    background: darkslategray;
+    color: white;
+    position: fixed;
+    width: 250px;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    margin-left: -250px;
+}
+
+.sidebar h3 {
+    padding: 20px;
+    background: black;
+}
+
+.sidebar .nav-link {
+    color: lightgray;
+    padding: 15px 20px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background: dimgray;
+    color: white;
+    padding-left: 30px;
+}
+
+.sidebar .nav-link.active {
+    background: dimgray;
+    color: white;
+}
+
+.main-content {
+    margin-left: 250px;
+    transition: all 0.3s;
+    padding: 20px;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+.stat-card {
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.activity-item {
+    padding: 15px;
+    border-bottom: 1px solid gainsboro;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.activity-item:hover {
+    background: whitesmoke;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.header {
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.refresh-btn {
+    transition: transform 0.3s;
+}
+
+.refresh-btn.spinning i {
+    animation: spin 1s linear;
+}
+
+@keyframes spin {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
